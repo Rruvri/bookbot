@@ -1,0 +1,26 @@
+def word_count(file_contents):
+	words = file_contents.split()
+	return len(words)
+
+
+def character_count(file_contents):
+	lowercase = file_contents.lower()
+
+	chr_count_dict = {}
+	for chr in lowercase:
+		if chr in chr_count_dict:
+			chr_count_dict[chr] += 1
+		else:
+			chr_count_dict[chr] = 1
+	return chr_count_dict
+
+def dict_sort(charcter_count):
+
+	clean_list = [] 
+	for char in character_count:
+		dict_entry = {}
+		count = character_count[char]
+		dict_entry[chr] = [count]
+		clean_list.append(dict_entry)
+	print(clean_list)
+
