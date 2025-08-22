@@ -6,6 +6,7 @@ def get_book_text(path_to_file):
 from stats import word_count
 from stats import character_count
 from stats import dict_sort
+from stats import search_func
 	
 def main():
 	import sys
@@ -30,8 +31,12 @@ def main():
 			print (f'{test_value}: {chr["num"]}')
 		else:
 			pass
-	print ("============= END ===============")
+	print ("=================================")
+	search_func(file_contents)
+	
 
+
+	
 main()
 
 

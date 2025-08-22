@@ -28,4 +28,21 @@ def dict_sort(chr_count_dict):
 	
 	return(sort_list)
 
+def search_func(file_contents):
+	lower = file_contents.lower()
+	split = lower.split()
+	search_count = 0
+	search_term = input("Search for term: ")
+	for word in split:
+		if word == search_term:
+			search_count += 1
+	print (f"{search_term} was found {search_count} times")
+	
+	repeat = input("Search again? [y]/[n]")
+	if repeat == "y":
+		search_func(file_contents)
+	else:
+		print ("============= END ===============") 
+
+	
 
